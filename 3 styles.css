@@ -1,0 +1,55 @@
+/*роблю розмір сторінки більше для можливості полистати сторінку і перевірити fixed box*/
+ body {
+    min-height: 2000px; 
+}
+
+
+/* Налаштування стилю всіх боксів */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    text-align: center;
+    line-height: 100px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Налаштування окремо розташування та оформлення боксів */
+.static {
+    background-color: #FFD700; /* Жовтий */
+}
+
+.relative {
+    background-color: #FF69B4; /* Рожевий */
+    position: relative;
+    top: 70px;
+    right: 1350px;
+}
+
+.absolute {
+    background-color: #00FA9A; /*Зелений */
+    position: absolute;
+    top: 45px;
+    left: 100px;
+    z-index: 1;
+}
+
+.fixed {
+    background-color: #87CEEB; /* Блакитний */
+    position: fixed;
+    top: 40px;
+    left: 15px;
+    z-index: 2; /* Якщо цей індекс більше - елемент буде над іншими елементами з меншим індексом */
+}
+
+/* "box static" - статичне позиціонування (залиште за замовчуванням). */
+/* "box relative” - відносне позиціонування, змініть позицію за допомогою top, right, bottom, left. */
+/* "box absolute" - абсолютне позиціонування, встановіть позицію відносно контейнера "container". */
+/* "box fixed” - фіксоване позиціонування, так щоб блок залишався видимим навіть під час прокрутки сторінки. */
